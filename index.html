@@ -15,35 +15,39 @@
   </head>
 
   <body>
-    <div class="form-group w-50 ">
-      <label for="soNguyen">Nhập vào số nguyên</label>
-      <input type="number" id="soNguyen" class="form-control w-75"/>
-     <div>
-      <button id="themSo" class="btn btn-success m-3">
-        Thêm số
-      </button>
-      <button id="tinhTong" class="btn btn-success m-3">
-        Tính tổng
-      </button>
-      <button id="min" class="btn btn-success m-3">
-      Minimum
-      </button>
-      <button id="clear"  class="btn btn-danger m-3 ">
-        Clear
+    <div class="form-group w-75">
+      <label for="soNguyen">Nhập vào số thực</label>
+      <input type="number" id="soNguyen" class="form-control w-50" />
+      <div>
+        <button id="themSo" class="btn btn-success m-3">Thêm số</button>
+        <button id="tinhTong" class="btn btn-success m-3">Tính tổng</button>
+        <button id="min" class="btn btn-success m-3">Minimum</button>
+        <button id="timSo" class="btn btn-success m-3 px-3 pr-4 text-center">
+          Tìm số
         </button>
-        <div>
-          <button id="timSo"  class="btn btn-success m-3 px-3 pr-4 text-center">
-            Tìm số
-        </div>
-     </div>
-      </button>
-
+        <button id="sapXep" class="btn btn-success m-3 px-3 pr-4 text-center">
+          Sắp xếp
+        </button>
+        <button id="soNguyenTo" class="btn btn-success mx-3">
+          Số nguyên tố
+        </button>
+        <button id="soSanh" class="btn btn-success mx-3">So sánh</button>
+        <button id="soThuc" class="btn btn-success mx-3">Số nguyên</button>
+        <button id="clear" class="btn btn-danger m-3">Clear</button>
+      </div>
     </div>
-    <div id="ketQua" class="ketQua"></div>
+    <div id="ketQua"></div>
+    <div id="ketQua1"></div>
+    <div class="pt-4">
+      <label for="viTri1"> Vị trí cần đổi 1</label>
+      <input type="number" id="viTri1" />
+      <br />
+      <label for="viTri2"> Vị trí cần đổi 2</label>
+      <input type="number" id="viTri2" /> <br />
 
+      <button id="doiVitri" class="btn btn-success mx-3">Đổi vị trí</button>
+    </div>
 
-
-    
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
