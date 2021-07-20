@@ -140,6 +140,8 @@ function soNT() {
   }
 }
 
+// So sánh số âm và dương
+
 document.getElementById("soSanh").addEventListener("click", compare);
 function compare() {
   ketQua1.innerHTML = "";
@@ -153,12 +155,23 @@ function compare() {
   var soDuong = 0;
   for (var i = 0; i < arrayAll.length; i++) {
     if (arrayAll[i] < 0) {
-      soAm++;
+      var c = soAm++;
+      soDuong;
     } else if (arrayAll[i] > 0) {
-      soDuong++;
+      var d = soDuong++;
     }
     amEL.innerHTML = "Số lượng số âm: " + soAm;
     duongEL.innerHTML = "Số lượng số dương: " + soDuong;
+
+    if (d < c) {
+      amduongEL.innerHTML = "Số lương số dương nhiều hơn số lượng âm";
+    }
+    if (c > d) {
+      amduongEL.innerHTML = "Số lương số dương ít hơn số lượng âm";
+    }
+    if (d === c) {
+      amduongEL.innerHTML = "Số lương số dương bằng số lượng âm";
+    }
   }
 }
 
