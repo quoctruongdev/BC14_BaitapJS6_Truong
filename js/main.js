@@ -116,29 +116,7 @@ function sapXep() {
   ketQua.appendChild(sortEL);
 }
 
-// Tìm số nguyên tố
-// document.getElementById("soNguyenTo").addEventListener("click", soNT);
-// function soNT() {
-//   var soNTEL = document.createElement("p");
-//   ketQua1.innerHTML = "";
-//   ketQua1.appendChild(soNTEL);
-//   for (var i = 0; i < arrayAll.length; i++) {
-//     if (arrayAll[i] === 2) {
-//       return (soNTEL.innerHTML =
-//         "số nguyên tố đầu tiên trong mảng 1: [ " + arrayAll[i] + " ]");
-//     }
-//     if (arrayAll[i] < 2) {
-//       soNTEL.innerHTML = "Không tìm thấy số nguyên tố trong mảng : -1";
-//     }
-//     if ((arrayAll[i] >= 3) & (arrayAll[i] % 2 != 0)(arrayAll[i] % 3 != 0)) {
-//       soNTEL.innerHTML =
-//         "số nguyên tố đầu tiên trong mảng 1: [ " + arrayAll[i] + " ]";
-//       return;
-//     } else {
-//       soNTEL.innerHTML = "Không tìm thấy số nguyên tố trong mảng : -1";
-//     }
-//   }
-// }
+// Tìm số nguyên tố đầu tiên trong mảng
 
 document.getElementById("soNguyenTo").addEventListener("click", lastNumber);
 
