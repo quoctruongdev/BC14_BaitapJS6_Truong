@@ -155,22 +155,20 @@ function compare() {
   var soDuong = 0;
   for (var i = 0; i < arrayAll.length; i++) {
     if (arrayAll[i] < 0) {
-      var c = soAm++;
-      soDuong;
+      soAm++;
     } else if (arrayAll[i] > 0) {
-      var d = soDuong++;
+      soDuong++;
     }
     amEL.innerHTML = "Số lượng số âm: " + soAm;
     duongEL.innerHTML = "Số lượng số dương: " + soDuong;
-
-    if (d < c) {
-      amduongEL.innerHTML = "Số lương số dương nhiều hơn số lượng âm";
+    if (soDuong > soAm) {
+      amduongEL.innerHTML = "Số lương số dương nhiều hơn số lượng số âm";
     }
-    if (c > d) {
-      amduongEL.innerHTML = "Số lương số dương ít hơn số lượng âm";
+    if (soAm > soDuong) {
+      amduongEL.innerHTML = "Số lương số âm nhiều hơn số lượng số dương";
     }
-    if (d === c) {
-      amduongEL.innerHTML = "Số lương số dương bằng số lượng âm";
+    if (soDuong === soAm) {
+      amduongEL.innerHTML = "Số lương số dương bằng số lượng số âm";
     }
   }
 }
