@@ -117,26 +117,48 @@ function sapXep() {
 }
 
 // Tìm số nguyên tố
-document.getElementById("soNguyenTo").addEventListener("click", soNT);
-function soNT() {
+// document.getElementById("soNguyenTo").addEventListener("click", soNT);
+// function soNT() {
+//   var soNTEL = document.createElement("p");
+//   ketQua1.innerHTML = "";
+//   ketQua1.appendChild(soNTEL);
+//   for (var i = 0; i < arrayAll.length; i++) {
+//     if (arrayAll[i] === 2) {
+//       return (soNTEL.innerHTML =
+//         "số nguyên tố đầu tiên trong mảng 1: [ " + arrayAll[i] + " ]");
+//     }
+//     if (arrayAll[i] < 2) {
+//       soNTEL.innerHTML = "Không tìm thấy số nguyên tố trong mảng : -1";
+//     }
+//     if ((arrayAll[i] >= 3) & (arrayAll[i] % 2 != 0)(arrayAll[i] % 3 != 0)) {
+//       soNTEL.innerHTML =
+//         "số nguyên tố đầu tiên trong mảng 1: [ " + arrayAll[i] + " ]";
+//       return;
+//     } else {
+//       soNTEL.innerHTML = "Không tìm thấy số nguyên tố trong mảng : -1";
+//     }
+//   }
+// }
+
+document.getElementById("soNguyenTo").addEventListener("click", lastNumber);
+
+function lastNumber() {
   var soNTEL = document.createElement("p");
   ketQua1.innerHTML = "";
   ketQua1.appendChild(soNTEL);
-  for (var i = 0; i < arrayAll.length; i++) {
-    if (arrayAll[i] === 2) {
+
+  arrayAll = arrayAll.filter((number) => {
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) return false;
+    }
+    return true;
+  });
+  for (var j = 0; j <= arrayAll.length; j++) {
+    if (arrayAll[j] >= 2) {
       return (soNTEL.innerHTML =
-        "số nguyên tố đầu tiên trong mảng 1: [ " + arrayAll[i] + " ]");
+        "Số nguyên tố đầu tiên trong mảng: [" + arrayAll[j] + "]");
     }
-    if (arrayAll[i] < 2) {
-      soNTEL.innerHTML = "Không tìm thấy số nguyên tố trong mảng : -1";
-    }
-    if ((arrayAll[i] >= 3) & (arrayAll[i] % 2 != 0)(arrayAll[i] % 3 != 0)) {
-      soNTEL.innerHTML =
-        "số nguyên tố đầu tiên trong mảng 1: [ " + arrayAll[i] + " ]";
-      return;
-    } else {
-      soNTEL.innerHTML = "Không tìm thấy số nguyên tố trong mảng : -1";
-    }
+    soNTEL.innerHTML = "Không tìm thấy số nguyên tố trong mảng: -1";
   }
 }
 
